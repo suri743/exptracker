@@ -1,16 +1,17 @@
 package com.suri.exptracker.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.suri.exptracker.entity.Expense;
-import com.suri.exptracker.entity.Transaction;
-import com.suri.exptracker.entity.User;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 import java.util.Map;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder(toBuilder = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class GroupDto {
@@ -19,7 +20,7 @@ public class GroupDto {
     String description;
     UserDto createdBy;
     List<UserDto> members;
-    Map<User, Double> balances;
-    List<Expense> expenses;
-    List<Transaction> transactions;
+    Map<UserDto, Double> balances;
+    List<ExpenseDto> expenses;
+    List<TransactionDto> transactions;
 }

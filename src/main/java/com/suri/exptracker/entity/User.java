@@ -1,6 +1,7 @@
 package com.suri.exptracker.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.ManyToMany;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -19,6 +20,6 @@ public class User extends BaseEntity {
     private String email;
     private String mobile;
 
-    @ManyToMany(mappedBy = "members")
+    @ManyToMany(mappedBy = "members", fetch = FetchType.LAZY)
     private List<Group> groups;
 }

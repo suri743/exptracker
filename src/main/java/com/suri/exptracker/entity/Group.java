@@ -10,6 +10,7 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.MapKeyJoinColumn;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -23,6 +24,7 @@ import java.util.Map;
 @SuperBuilder(toBuilder = true)
 @NoArgsConstructor
 @Entity
+@Table(name = "`group`")
 public class Group extends BaseEntity {
     private String name;
 

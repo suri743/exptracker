@@ -4,6 +4,7 @@ import com.suri.exptracker.dto.ExpenseDto;
 import com.suri.exptracker.dto.GroupDto;
 import com.suri.exptracker.dto.SplitDto;
 import com.suri.exptracker.dto.UserDto;
+import com.suri.exptracker.dto.UserResponseDto;
 import com.suri.exptracker.entity.Expense;
 import com.suri.exptracker.entity.Group;
 import com.suri.exptracker.entity.Split;
@@ -39,16 +40,16 @@ public class SplitMapper {
             .build();
     }
 
-    private static User getUserEntity(UserDto userDto) {
-        if(userDto == null)
+    private static User getUserEntity(UserDto userResponseDto) {
+        if(userResponseDto == null)
             return null;
 
         return User
             .builder()
-            .id(userDto.getId())
-            .name(userDto.getName())
-            .mobile(userDto.getMobile())
-            .email(userDto.getEmail())
+            .id(userResponseDto.getId())
+            .name(userResponseDto.getName())
+            .mobile(userResponseDto.getMobile())
+            .email(userResponseDto.getEmail())
             .build();
     }
 
@@ -92,8 +93,7 @@ public class SplitMapper {
         if(user == null)
             return null;
 
-        return UserDto
-            .builder()
+        return UserDto.builder()
             .id(user.getId())
             .name(user.getName())
             .mobile(user.getMobile())
