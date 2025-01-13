@@ -8,7 +8,7 @@ import org.mapstruct.ReportingPolicy;
 import java.util.List;
 
 @Mapper(componentModel = "spring", unmappedSourcePolicy = ReportingPolicy.IGNORE,
-    unmappedTargetPolicy = ReportingPolicy.IGNORE, uses = {UserMapper.class, ExpenseMapper.class})
+    unmappedTargetPolicy = ReportingPolicy.IGNORE, uses = {UserMapper.class,ExpenseMapper.class})
 public abstract class GroupMapper {
 
     public abstract GroupDto mapEntityToDto(Group group);

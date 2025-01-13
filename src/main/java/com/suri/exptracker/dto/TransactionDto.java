@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 @Builder(toBuilder = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
-public class       TransactionDto {
+public class TransactionDto {
     Integer id;
     String note;
     double amount;
