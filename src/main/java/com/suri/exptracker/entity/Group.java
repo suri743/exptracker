@@ -10,7 +10,6 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.MapKeyJoinColumn;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -26,7 +25,6 @@ import java.util.Map;
 @NoArgsConstructor
 @Entity
 @Table(name = "`group`")
-@SequenceGenerator(name = "group_seq", sequenceName = "group_seq", allocationSize = 1)
 public class Group extends BaseEntity {
     private String name;
 
