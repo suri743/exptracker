@@ -1,6 +1,6 @@
 package com.suri.exptracker.controller;
 
-import com.suri.exptracker.dto.UserDto;
+import com.suri.exptracker.dto.requestdtos.UserDto;
 import com.suri.exptracker.dto.UserResponseDto;
 import com.suri.exptracker.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +16,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("api/exptracker/")
+@RequestMapping("api/exptracker")
 public class UserController {
 
     private final UserService userService;

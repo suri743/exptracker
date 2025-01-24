@@ -1,8 +1,6 @@
-package com.suri.exptracker.dto;
-
+package com.suri.exptracker.dto.requestdtos;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.suri.exptracker.dto.requestdtos.UserDto;
 import lombok.Builder;
 import lombok.Data;
 
@@ -11,12 +9,10 @@ import java.util.List;
 @Data
 @Builder(toBuilder = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
-public class ExpenseDto {
+public class GroupRequestDto {
     Integer id;
     String name;
-    String note;
-    double amount;
-    GroupDto group;
-    UserDto paidBy;
-    List<SplitDto> owed;
+    String description;
+    UserDto createdBy;
+    List<UserDto> members;
 }

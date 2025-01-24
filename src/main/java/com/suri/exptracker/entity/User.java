@@ -6,6 +6,7 @@ import jakarta.persistence.ManyToMany;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.experimental.FieldNameConstants;
 import lombok.experimental.SuperBuilder;
 
 import java.util.List;
@@ -15,6 +16,7 @@ import java.util.List;
 @SuperBuilder(toBuilder = true)
 @NoArgsConstructor
 @Entity
+@FieldNameConstants
 public class User extends BaseEntity {
     private String name;
     private String email;
