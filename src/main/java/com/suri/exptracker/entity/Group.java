@@ -40,11 +40,11 @@ public class Group extends BaseEntity {
     )
     private List<User> members;
 
-    @ElementCollection
-    @CollectionTable(name = "group_balances", joinColumns = @JoinColumn(name = "group_id"))
-    @MapKeyJoinColumn(name = "user_id")
-    @Column(name = "balance")
-    private Map<User, Double> balances;
+//    @ElementCollection
+//    @CollectionTable(name = "group_balances", joinColumns = @JoinColumn(name = "group_id"))
+//    @MapKeyJoinColumn(name = "user_id")
+//    @Column(name = "balance")
+//    private Map<User, Double> balances;
 
     @OneToMany(mappedBy = "group")
     private List<Expense> expenses;

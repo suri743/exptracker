@@ -1,6 +1,7 @@
 package com.suri.exptracker.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.suri.exptracker.dto.requestdtos.UserDto;
 import lombok.Builder;
 import lombok.Data;
 

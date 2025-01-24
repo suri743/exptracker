@@ -3,8 +3,7 @@ package com.suri.exptracker.mapper;
 import com.suri.exptracker.dto.ExpenseDto;
 import com.suri.exptracker.dto.GroupDto;
 import com.suri.exptracker.dto.SplitDto;
-import com.suri.exptracker.dto.UserDto;
-import com.suri.exptracker.dto.UserResponseDto;
+import com.suri.exptracker.dto.requestdtos.UserDto;
 import com.suri.exptracker.entity.Expense;
 import com.suri.exptracker.entity.Group;
 import com.suri.exptracker.entity.Split;
@@ -64,9 +63,12 @@ public class SplitMapper {
             .paidBy(getUserEntity(expenseDto.getPaidBy()))
             .amount(expenseDto.getAmount())
             .group(Group.builder()
-                       .id(expenseDto.getGroup().getId())
-                       .name(expenseDto.getGroup().getName())
-                       .description(expenseDto.getGroup().getDescription())
+                       .id(expenseDto
+                               .getGroup().getId())
+                       .name(expenseDto
+                                 .getGroup().getName())
+                       .description(expenseDto
+                                        .getGroup().getDescription())
                        .build())
             .build();
     }

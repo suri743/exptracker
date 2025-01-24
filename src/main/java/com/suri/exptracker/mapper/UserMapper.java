@@ -1,6 +1,6 @@
 package com.suri.exptracker.mapper;
 
-import com.suri.exptracker.dto.UserDto;
+import com.suri.exptracker.dto.requestdtos.UserDto;
 import com.suri.exptracker.entity.User;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;

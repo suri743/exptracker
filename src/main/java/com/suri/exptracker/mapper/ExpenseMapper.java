@@ -40,14 +40,17 @@ public abstract class ExpenseMapper {
     }
 
     @AfterMapping
-    protected void mapGroup(ExpenseDto expenseDto, @MappingTarget Expense.ExpenseBuilder<?,?> expense) {
+    protected void mapGroup(ExpenseDto expenseDto,@MappingTarget Expense.ExpenseBuilder<?,?> expense) {
         if(Objects.isNull(expenseDto.getGroup()))
             return;
 
         expense.group(Group.builder()
-                          .id(expenseDto.getGroup().getId())
-                          .description(expenseDto.getGroup().getDescription())
-                          .name(expenseDto.getGroup().getName())
+                          .id(expenseDto
+                                  .getGroup().getId())
+                          .description(expenseDto
+                                           .getGroup().getDescription())
+                          .name(expenseDto
+                                    .getGroup().getName())
                           .build());
     }
 

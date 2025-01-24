@@ -1,6 +1,7 @@
 package com.suri.exptracker.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.suri.exptracker.dto.requestdtos.UserDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,7 +21,7 @@ public class GroupDto {
     String description;
     UserDto createdBy;
     List<UserDto> members;
-    Map<UserDto, Double> balances;
+    Map<String, Double> balances;
     List<ExpenseDto> expenses;
     List<TransactionDto> transactions;
 }
